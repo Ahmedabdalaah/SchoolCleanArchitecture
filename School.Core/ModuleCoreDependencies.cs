@@ -8,7 +8,7 @@ namespace School.Core
     public static class ModuleCoreDependencies
     {
         public static IServiceCollection AddCoreDependencies(this IServiceCollection services)
-        {
+    {
             services.AddMediatR(c => c.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));    
             return services;
         }

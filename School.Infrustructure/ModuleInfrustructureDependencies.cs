@@ -7,7 +7,7 @@ namespace School.Infrustructure
     public static class ModuleInfrustructureDependencies
     {
         public static IServiceCollection AddInfrustructureDependencies(this IServiceCollection services)
-        {
+    {
             services.AddTransient<IStudentRepository , StudentRepository> ();
             return services;
         }
