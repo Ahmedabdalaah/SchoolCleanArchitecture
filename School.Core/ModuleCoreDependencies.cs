@@ -8,8 +8,11 @@ namespace School.Core
     public static class ModuleCoreDependencies
     {
         public static IServiceCollection AddCoreDependencies(this IServiceCollection services)
-        {
-            services.AddMediatR(c => c.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));    
+    {       
+            // Configuring of Mediator
+            services.AddMediatR(c => c.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly())); 
+            // Configure of Auto Mapper
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
             return services;
         }
     }

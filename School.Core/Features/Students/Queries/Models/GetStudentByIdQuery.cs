@@ -10,7 +10,12 @@ using System.Threading.Tasks;
 
 namespace School.Core.Features.Students.Queries.Models
 {
-    public class GetStudentListQuery : IRequest<Response<List<GetStudentListRespnse>>>
+    public class GetStudentByIdQuery : IRequest<Response<GetSingleStudentResponse>>
     {
+        public int Id { get; set; }
+        public GetStudentByIdQuery(int id)
+        {
+            Id= id;
+        }
     }
 }
