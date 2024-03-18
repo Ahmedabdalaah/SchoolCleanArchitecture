@@ -18,7 +18,7 @@ namespace School.Core.Features.Students.Queries.Handlers
         IRequestHandler<GetStudentListQuery,Response<List<GetStudentListRespnse>>>,
         IRequestHandler<GetStudentByIdQuery, Response<GetSingleStudentResponse>>
     {
-        #region Function
+        #region Fields
         private readonly IStudentService _studentService;
         private readonly IMapper _mapper;
         #endregion

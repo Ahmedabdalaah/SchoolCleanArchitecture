@@ -36,6 +36,12 @@ namespace School.Service.Implementations
                                     .FirstOrDefault();
             return student;
         }
+
+        public async Task<string> AddStudentAsunc(Student student)
+        {
+            await _repo.AddAsync(student);
+            return "Success";
+        }
         #endregion
     }
 }
